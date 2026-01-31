@@ -26,7 +26,7 @@
 ## 📖 Overview
 
 <div align="center">
-<img src="docs/images/banner.svg" alt="FaceFortify Banner" width="800"/>
+<img src="docs/images/banner.svg" alt="FaceFortify Banner"/>
 </div>
 **FaceFortify** is a cross-platform desktop application that combines **facial recognition** with **AES-256 encryption** to provide unparalleled folder security. Lock and unlock sensitive folders using your face, with optional backup password for hardware changes.
 
