@@ -45,19 +45,19 @@
 <div align="center">
 
 ### 📝 First Time Registration
-<img src="docs/images/registration.PNG" width="800"/>
+<img src="docs/images/registration.PNG" width="600"/>
 
 ### 👋 Welcome Screen
-<img src="docs/images/landing.PNG" width="800"/>
+<img src="docs/images/landing.PNG" width="600"/>
 
 ### 🔑 Backup & Hardware Security
-<img src="docs/images/Backupkey.PNG" width="800"/>
+<img src="docs/images/Backupkey.PNG" width="600"/>
 
 ### 🏠 Dashboard – Manage Protected Folders
-<img src="docs/images/dashboard.PNG" width="800"/>
+<img src="docs/images/dashboard.PNG" width="600"/>
 
 ### ⚙️ Settings & Profile
-<img src="docs/images/settings.PNG" width="800"/>
+<img src="docs/images/settings.PNG" width="600"/>
 
 </div>
 
