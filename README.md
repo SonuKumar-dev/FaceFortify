@@ -255,6 +255,7 @@ FaceFortify.Desktop/
 ---
 
 ## 📚 Documentation
+- 📖 [Documentation](docs/ALGORITHMS.md)
 - [Security](docs/SECURITY.md) - Security architecture
 - [Contributing](CONTRIBUTING.md) - Contribution guidelines
 
@@ -284,8 +285,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 ## 📞 Support
-
-- 📖 [Documentation](docs/ALGORITHMS.md)
 - 🐛 [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues)
 
 **Security Issues**: Please report privately to work1.sonukumar@gmail.com
