@@ -2,6 +2,45 @@
 
 This document describes the core algorithms used in FaceFortify for face recognition, key derivation, and file encryption.
 
+## System Flow
+
+### High-Level Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     User Interface (Avalonia UI)             │
+│  LandingPage → MainWindow → CameraWindow → Settings         │
+└────────────────────────────┬────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────┐
+│                     ViewModels (MVVM)                        │
+│  - LandingPageViewModel                                      │
+│  - MainWindowViewModel                                       │
+│  - CameraWindowViewModel                                     │
+│  - SettingsWindowViewModel                                   │
+└────────────────────────────┬────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────┐
+│                        Services Layer                        │
+│  ┌─────────────────┐  ┌──────────────────┐                 │
+│  │ Face Services   │  │ Crypto Services  │                 │
+│  │ - FaceAuth      │  │ - AesKey         │                 │
+│  │ - ArcFace       │  │ - KeyDerivation  │                 │
+│  │ - HaarCascade   │  │ - FolderCrypto   │                 │
+│  │ - Camera        │  │ - FolderLock     │                 │
+│  └─────────────────┘  └──────────────────┘                 │
+│                                                              │
+│  ┌─────────────────┐  ┌──────────────────┐                 │
+│  │ System Services │  │ Data Services    │                 │
+│  │ - MachineId     │  │ - UserProfile    │                 │
+│  │ - AccessControl │  │ - AppState       │                 │
+│  │ - DataPath      │  │                  │                 │
+│  └─────────────────┘  └──────────────────┘                 │
+└─────────────────────────────────────────────────────────────┘
+```
+
 ## 1. Face Registration Algorithm
 
 1. Capture 30 frames from the camera.
@@ -67,4 +106,124 @@ Steps:
 3. Encode as Base64 → Machine ID.
 
 This binds encryption keys to one device.
+### Why Cosine Similarity?
+
+Face embeddings are **normalized vectors**. Cosine similarity measures the angle between vectors:
+
+```
+similarity = cos(θ) = (A · B) / (||A|| × ||B||)
+
+Since both are L2 normalized (||A|| = ||B|| = 1):
+similarity = A · B  (just the dot product!)
+
+Range: -1 to 1
+• 1.0 = Identical
+• 0.5 = Different but similar
+• 0.0 = Completely different
+• -1.0 = Opposite
+
+Our threshold: 0.45 = ~63° angle difference
+```
+
+---
+
+## Encryption Key Derivation
+
+### The Key Derivation Chain
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    INPUT COMPONENTS                          │
+└────────────┬────────────────────────────────────────────────┘
+             │
+   ┌─────────┴─────────┬─────────────┬─────────────────┐
+   │                   │             │                 │
+   ▼                   ▼             ▼                 ▼
+┌──────┐         ┌──────────┐   ┌──────┐       ┌──────────┐
+│ Face │         │ Machine  │   │ Salt │       │ Password │
+│Embed │   +     │    ID    │   │(32B) │       │(optional)│
+│512 F │         │ (Base64) │   │Random│       │          │
+└──────┘         └──────────┘   └──────┘       └──────────┘
+   │                   │             │                 │
+   │                   │             │                 │
+   └─────────┬─────────┘             │                 │
+             │                       │                 │
+             ▼                       │                 │
+      ┌─────────────┐                │                 │
+      │  Combined   │                │                 │
+      │   Bytes     │                │                 │
+      │ (Float→Byte)│                │                 │
+      └──────┬──────┘                │                 │
+             │                       │                 │
+             └───────────┬───────────┘                 │
+                         │                             │
+                         ▼                             │
+                  ┌─────────────┐                      │
+                  │   PBKDF2    │                      │
+                  │ Key         │                      │
+                  │ Derivation  │                      │
+                  │             │                      │
+                  │ • Algo: SHA256                     │
+                  │ • Iterations: 100,000              │
+                  │ • Output: 32 bytes                 │
+                  └──────┬──────┘                      │
+                         │                             │
+                         ▼                             │
+                  ┌─────────────┐                      │
+                  │  Primary    │                      │
+                  │  AES Key    │                      │
+                  │  (256-bit)  │                      │
+                  └─────────────┘                      │
+                                                       │
+      Face + Password (no machine ID)                 │
+      ────────────────────────────────────────────────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   Backup    │
+                  │  AES Key    │
+                  │  (256-bit)  │
+                  └─────────────┘
+```
+
+### PBKDF2 in Detail
+
+**Purpose**: Slow down brute-force attacks
+
+```python
+# Simplified pseudocode
+def PBKDF2(password, salt, iterations, hash_algo, key_length):
+    # Initial state
+    result = bytes()
+    
+    # For each block of output needed
+    for block in range(1, ceil(key_length / hash_length) + 1):
+        # First iteration: PRF(password, salt || block)
+        u = PRF(password, salt + int_to_bytes(block))
+        current = u
+        
+        # Remaining iterations
+        for i in range(1, iterations):
+            u = PRF(password, u)
+            current = current XOR u  # XOR results together
+        
+        result += current
+    
+    return result[:key_length]
+```
+
+**Why 100,000 iterations?**
+- Makes each key derivation take ~50-100ms
+- Slows attackers to ~10-20 attempts/second
+- Users barely notice the delay
+- NIST recommendation: ≥10,000 (we use 10x more!)
+
+**Example timing:**
+```
+1 iteration:     0.001 ms  →  1,000,000 attempts/sec  ❌
+100 iterations:  0.1 ms    →  10,000 attempts/sec      ❌
+100,000 iterations: 100 ms →  10 attempts/sec          ✅
+```
+
+
 
