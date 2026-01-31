@@ -313,6 +313,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ⭐ Star us on GitHub — it motivates us a lot!
 
-[⬆ Back to Top](#-facefortify-desktop)
+[⬆ Back to Top](#-facefortify)
 
 </div>
