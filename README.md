@@ -50,6 +50,9 @@
 ### 👋 Welcome Screen
 <img src="docs/images/landing.PNG" width="600"/>
 
+### 👋 Face Register Screen
+<img src="docs/images/Camera Feed.PNG" width="600"/>
+
 ### 🔑 Backup & Hardware Security
 <img src="docs/images/Backupkey.PNG" width="600"/>
 
