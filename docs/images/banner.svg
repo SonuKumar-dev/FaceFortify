@@ -1,0 +1,170 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient backgrounds -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#0099ff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Face scan pattern -->
+    <pattern id="scanlines" x="0" y="0" width="2" height="2" patternUnits="userSpaceOnUse">
+      <rect width="2" height="1" fill="#00d4ff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Scanline pattern overlay -->
+  <rect width="1200" height="400" fill="url(#scanlines)"/>
+  
+  <!-- Decorative grid lines -->
+  <g opacity="0.1" stroke="#00d4ff" stroke-width="0.5" fill="none">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="600" y1="0" x2="600" y2="400"/>
+    <line x1="900" y1="0" x2="900" y2="400"/>
+  </g>
+  
+  <!-- Left decorative element - Face icon with scan effect -->
+  <g transform="translate(120, 200)">
+    <!-- Outer glow circle -->
+    <circle cx="0" cy="0" r="90" fill="none" stroke="url(#glowGradient)" stroke-width="2" opacity="0.5"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="url(#accentGradient)" stroke-width="1.5" opacity="0.7"/>
+    
+    <!-- Face outline -->
+    <ellipse cx="0" cy="0" rx="50" ry="60" fill="none" stroke="#00d4ff" stroke-width="3" filter="url(#glow)"/>
+    
+    <!-- Eyes -->
+    <g fill="#00d4ff" filter="url(#glow)">
+      <circle cx="-18" cy="-15" r="5"/>
+      <circle cx="18" cy="-15" r="5"/>
+      
+      <!-- Eye details -->
+      <circle cx="-18" cy="-15" r="2" fill="#fff"/>
+      <circle cx="18" cy="-15" r="2" fill="#fff"/>
+    </g>
+    
+    <!-- Nose -->
+    <path d="M 0,-5 L -3,8 L 3,8 Z" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Mouth -->
+    <path d="M -15,25 Q 0,32 15,25" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Scan lines animation effect -->
+    <g opacity="0.6">
+      <line x1="-60" y1="-70" x2="60" y2="-70" stroke="#00d4ff" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="y1" values="-70;70;-70" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="-70;70;-70" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="-60" y1="-60" x2="60" y2="-60" stroke="#00d4ff" stroke-width="1" opacity="0.5">
+        <animate attributeName="y1" values="-60;70;-60" dur="3s" begin="0.2s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="-60;70;-60" dur="3s" begin="0.2s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    
+    <!-- Corner brackets -->
+    <g stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M -65,-65 L -75,-65 L -75,-75 L -65,-75"/>
+      <path d="M 65,-65 L 75,-65 L 75,-75 L 65,-75"/>
+      <path d="M -65,65 L -75,65 L -75,75 L -65,75"/>
+      <path d="M 65,65 L 75,65 L 75,75 L 65,75"/>
+    </g>
+  </g>
+  
+  <!-- Main title -->
+  <text x="600" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="800" fill="url(#accentGradient)" text-anchor="middle" filter="url(#glow)">
+    FaceFortify
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="32" font-weight="300" fill="#ffffff" text-anchor="middle" opacity="0.9">
+    Your Face is Your Password
+  </text>
+  
+  <!-- Subtext -->
+  <text x="600" y="240" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="400" fill="#00d4ff" text-anchor="middle" opacity="0.8">
+    Secure • Biometric • Face Recognition Lock
+  </text>
+  
+  <!-- Feature icons -->
+  <g transform="translate(380, 290)">
+    <!-- Lock icon -->
+    <g>
+      <rect x="0" y="10" width="25" height="20" rx="3" fill="none" stroke="#00d4ff" stroke-width="2"/>
+      <path d="M 5,10 L 5,5 Q 5,0 12.5,0 Q 20,0 20,5 L 20,10" fill="none" stroke="#00d4ff" stroke-width="2"/>
+      <circle cx="12.5" cy="20" r="2" fill="#00d4ff"/>
+      <text x="35" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#ffffff" opacity="0.8">Folder Encryption</text>
+    </g>
+  </g>
+  
+  <g transform="translate(600, 290)">
+    <!-- Shield icon -->
+    <g>
+      <path d="M 12.5,0 L 25,7 L 25,20 Q 25,30 12.5,35 Q 0,30 0,20 L 0,7 Z" fill="none" stroke="#00d4ff" stroke-width="2"/>
+      <path d="M 8,15 L 11,20 L 17,10" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="35" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#ffffff" opacity="0.8">Biometric Auth</text>
+    </g>
+  </g>
+  
+  <g transform="translate(800, 290)">
+    <!-- Key icon -->
+    <g>
+      <circle cx="7" cy="7" r="7" fill="none" stroke="#00d4ff" stroke-width="2"/>
+      <circle cx="7" cy="7" r="3" fill="none" stroke="#00d4ff" stroke-width="2"/>
+      <line x1="12" y1="12" x2="25" y2="25" stroke="#00d4ff" stroke-width="2"/>
+      <path d="M 20,25 L 20,28 M 23,25 L 23,28" stroke="#00d4ff" stroke-width="2"/>
+      <text x="35" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#ffffff" opacity="0.8">Hardware Binding</text>
+    </g>
+  </g>
+  
+  <!-- Right decorative element - fingerprint/secure pattern -->
+  <g transform="translate(1050, 200)" opacity="0.3">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#00d4ff" stroke-width="1"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#00d4ff" stroke-width="1"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#00d4ff" stroke-width="1"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#00d4ff" stroke-width="1"/>
+  </g>
+  
+  <!-- Animated particles -->
+  <g opacity="0.6">
+    <circle cx="250" cy="80" r="2" fill="#00d4ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;60;80" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="100" r="2" fill="#00d4ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="100;80;100" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="320" r="2" fill="#00d4ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="320;340;320" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <rect x="300" y="360" width="600" height="2" fill="url(#accentGradient)" opacity="0.5"/>
+</svg>
