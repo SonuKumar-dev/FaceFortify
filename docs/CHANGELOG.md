@@ -159,7 +159,7 @@ None yet.
 
 - [Source Code](https://github.com/SonuKumar-dev/FaceFortify)
 - [Issue Tracker](https://github.com/SonuKumar-dev/FaceFortify/issues)
-- [Discussions](https://github.comSonuKumar-dev/FaceFortify/discussions)
+- [Discussions](https://github.com/SonuKumar-dev/FaceFortify/discussions)
 - [Releases](https://github.com/SonuKumar-dev/FaceFortify/releases)
 
 ---
