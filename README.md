@@ -1,4 +1,4 @@
-# 🔐 FaceFortify Desktop
+# 🔐 FaceFortify
 
 <div align="center">
 
@@ -6,14 +6,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue)](https://dotnet.microsoft.com/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)](https://github.com/SonuKumar-dev/FaceFortify.Desktop)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)](https://github.com/SonuKumar-dev/FaceFortify)
 [![C#](https://img.shields.io/badge/C%23-Programming%20Language-purple)](https://learn.microsoft.com/dotnet/csharp/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)](https://opencv.org/)
 [![ONNX Runtime](https://img.shields.io/badge/ONNX-Runtime-orange)](https://onnxruntime.ai/)
 [![Avalonia UI](https://img.shields.io/badge/UI-Avalonia-blueviolet)](https://avaloniaui.net/)
 [![PBKDF2](https://img.shields.io/badge/KDF-PBKDF2-blue)](https://en.wikipedia.org/wiki/PBKDF2)
 [![AES-256](https://img.shields.io/badge/Encryption-AES--256-red)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-[![Release](https://img.shields.io/github/v/release/SonuKumar-dev/FaceFortify.Desktop)](https://github.com/SonuKumar-dev/FaceFortify.Desktop/releases)
+[![Release](https://img.shields.io/github/v/release/SonuKumar-dev/FaceFortify)](https://github.com/SonuKumar-dev/FaceFortify/releases)
 
 *Military-grade encryption meets cutting-edge facial recognition*
 
@@ -104,7 +104,7 @@
 
 ### Latest Release
 
-[**Download Latest Version**](https://github.com/SonuKumar-dev/FaceFortify.Desktop/releases/latest)
+[**Download Latest Version**](https://github.com/SonuKumar-dev/FaceFortify/releases/latest)
 
 ### Windows
 
@@ -286,8 +286,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## 📞 Support
 
 - 📖 [Documentation](docs/)
-- 💬 [Discussions](https://github.com/SonuKumar-dev/FaceFortify.Desktop/discussions)
-- 🐛 [Issues](https://github.com/SonuKumar-dev/FaceFortify.Desktop/issues)
+- 💬 [Discussions](https://github.com/SonuKumar-dev/FaceFortify/discussions)
+- 🐛 [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues)
 
 **Security Issues**: Please report privately to work1.sonukumar@gmail.com
 
