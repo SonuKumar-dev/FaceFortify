@@ -285,7 +285,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
-- 📖 [Documentation](https://github.com/SonuKumar-dev/docs/FaceFortify/ALGORITHMS.md)
+- 📖 [Documentation](https://github.com/SonuKumar-dev/FaceFortify/docs/ALGORITHMS.md)
 - 🐛 [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues)
 
 **Security Issues**: Please report privately to work1.sonukumar@gmail.com
