@@ -191,7 +191,7 @@ Output: `publish/macos/FaceFortify-macOS-*.dmg`
 ### Tech Stack
 
 - **Frontend**: Avalonia UI 11.3, MVVM, ReactiveUI
-- **Backend**: .NET 8.0, c#
+- **Backend**: .NET 8.0, C#
 - **AI/ML**: ONNX Runtime (ArcFace), OpenCV Sharp 4.11
 - **Encryption**: AES-256-CBC, PBKDF2 (SHA-256, 100k iterations)
 - **Cross-Platform**: .NET 8, Platform-specific APIs
