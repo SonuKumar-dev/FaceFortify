@@ -17,7 +17,7 @@
 
 *Military-grade encryption meets cutting-edge facial recognition*
 
-[Features](#-features) • [Download](#-download) • [Build](#-building-from-source) • [Documentation](#-documentation)
+[Features](#-features) • [Download](#-download) • [Documentation](#-documentation)
 
 </div>
 
@@ -286,7 +286,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## 📞 Support
 
 - 📖 [Documentation](docs/)
-- 💬 [Discussions](https://github.com/SonuKumar-dev/FaceFortify/discussions)
 - 🐛 [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues)
 
 **Security Issues**: Please report privately to work1.sonukumar@gmail.com
