@@ -55,21 +55,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [0.9.0-beta] - 2025-01-XX
-
-### Added
-- Beta release for testing
-- Core facial recognition functionality
-- Basic encryption support
-- Windows-only support
-
-### Known Issues
-- Eye detection not visualized in camera preview
-- Data stored in bin/Debug folder (not production-ready)
-- No installers available
-
----
-
 ## Development Milestones
 
 ### Phase 1: Core Functionality ✅
@@ -104,11 +89,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 1.0.0 - Initial Release
 First stable release with full cross-platform support and production-ready builds.
-
-### 0.9.0-beta - Beta Testing
-Beta release for early adopters and testing.
-
----
 
 ## Migration Guide
 
@@ -175,18 +155,6 @@ None yet.
 
 ---
 
-## Contributors
-
-Thank you to all contributors! 🎉
-
-- @yourusername - Project creator and maintainer
-- @contributor1 - Feature X
-- @contributor2 - Bug fix Y
-
-[View all contributors](https://github.com/yourusername/FaceFortify/graphs/contributors)
-
----
-
 ## Links
 
 - [Source Code](https://github.com/SonuKumar-dev/FaceFortify)
@@ -195,7 +163,4 @@ Thank you to all contributors! 🎉
 - [Releases](https://github.com/SonuKumar-dev/FaceFortify/releases)
 
 ---
-
-[Unreleased]: https://github.com/SonuKumar-dev/FaceFortify/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/SonuKumar-dev/FaceFortify/releases/tag/v1.0.0
-[0.9.0-beta]: https://github.com/SonuKumar-dev/FaceFortify/releases/tag/v0.9.0-beta
