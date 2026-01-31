@@ -44,7 +44,6 @@ This project and everyone participating in it is governed by our Code of Conduct
 ### 💡 Suggesting Features
 
 **Before Suggesting:**
-- Check [discussions](https://github.com/SonuKumar-dev/FaceFortify/discussions)
 - Check existing feature requests
 - Consider if it aligns with project goals
 
@@ -398,16 +397,14 @@ Please update the appropriate sections in README.md
 
 ### Where to Get Help
 
-- [GitHub Discussions](https://github.com/SonuKumar-dev/FaceFortify/discussions) - General questions
 - [Discord](#) - Real-time chat (if available)
 - [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues) - Bug reports only
 
 ### Where to Discuss
 
-- Feature ideas → Discussions
 - Bug reports → Issues
 - Pull requests → PR comments
-- Security issues → security@yourproject.com (private)
+- Security issues → work1.sonukumar.com (private)
 
 ---
 
@@ -417,16 +414,6 @@ Contributors are recognized in:
 - CONTRIBUTORS.md file
 - Release notes
 - Special mentions for significant contributions
-
----
-
-## Questions?
-
-Don't hesitate to ask! We're here to help.
-
-- Open a [discussion](https://github.com/SonuKumar-dev/FaceFortify/discussions)
-- Comment on an issue
-- Reach out to maintainers
 
 ---
 
