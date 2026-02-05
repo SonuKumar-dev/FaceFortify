@@ -45,7 +45,7 @@
 
 ## 🖼️ Application Preview
 
-<div align="center">
+<!-- <div align="center"> -->
 
 ### 📝 First Time Registration
 <img src="docs/images/registration.PNG" width="600"/>
