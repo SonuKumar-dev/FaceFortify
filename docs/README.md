@@ -6,7 +6,7 @@ This document describes the core algorithms used in FaceFortify for face recogni
 
 ### High-Level Architecture
 
-<img src="/images/FaceFortify HLD.png" width="600"/>
+<img src="docs/images/FaceFortify HLD.png" width="600"/>
 
 ## 1. Face Registration Algorithm
 
