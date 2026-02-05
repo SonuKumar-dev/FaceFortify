@@ -105,7 +105,7 @@ Our threshold: 0.45 = ~63° angle difference
 
 ### The Key Derivation Chain
 
-![Key Derivation Chain](sandbox:/mnt/data/A_flowchart_diagram_in_a_digital_2D_illustration_d.png)
+<img src="images/The Key Derivation Chain.png" width="600"/>
 
 ### PBKDF2 in Detail
 
