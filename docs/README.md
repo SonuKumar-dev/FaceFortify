@@ -120,6 +120,6 @@ Our threshold: 0.45 = ~63° angle difference
 
 **Example timing:**
 
-1 iteration:        ~0.001 ms  →  ~1,000,000 attempts/sec  ❌
-100 iterations:    ~0.1 ms    →  ~10,000 attempts/sec      ❌
-100,000 iterations: ~100 ms   →  ~10 attempts/sec          ✅
+* 1 iteration:        ~0.001 ms  →  ~1,000,000 attempts/sec  ❌
+* 100 iterations:    ~0.1 ms    →  ~10,000 attempts/sec      ❌
+* 100,000 iterations: ~100 ms   →  ~10 attempts/sec          ✅
