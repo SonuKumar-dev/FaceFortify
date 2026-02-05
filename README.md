@@ -262,7 +262,7 @@ FaceFortify.Desktop/
 ---
 
 ## 📚 Documentation
-- 📖 [Documentation](docs/README.md) - Code Algorithms 
+- [Documentation](docs/README.md) - Code Algorithms 
 - [Security](docs/SECURITY.md) - Security architecture
 - [Contributing](CONTRIBUTING.md) - Contribution guidelines
 
