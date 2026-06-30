@@ -1,4 +1,4 @@
-# 🔐 FaceFortify
+# FaceFortify
 
 <div align="center">
 
@@ -23,14 +23,14 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 <div align="center">
 <img src="docs/images/banner.svg" alt="FaceFortify Banner"/>
 </div>
 **FaceFortify** is a cross-platform desktop application that combines **facial recognition** with **AES-256 encryption** to provide unparalleled folder security. Lock and unlock sensitive folders using your face, with optional backup password for hardware changes.
 
-### 🎯 Key Highlights
+### Key Highlights
 
 - 🔒 **Zero-Knowledge Security** - Your face data never leaves your device
 - 👤 **Advanced Face Recognition** - ArcFace ONNX model with 99%+ accuracy  
@@ -43,14 +43,14 @@
 
 ---
 
-## 🖼️ Application Preview
+## Application Preview
 
 <!-- <div align="center"> -->
 
-### 🏠 Dashboard – Manage Protected Folders
+### Dashboard – Manage Protected Folders
 <img src="docs/images/dashboard.JPG" width="600"/>
 
-### 📷 Face Register Screen
+### Face Register Screen
 <img src="docs/images/Camera Feed.PNG" width="600"/>
 
 </div>
@@ -119,7 +119,7 @@
 
 ---
 
-## 🏗️ Building from Source
+## Building from Source
 
 ### Prerequisites
 
@@ -180,7 +180,7 @@ Output: `publish/macos/FaceFortify-macOS-*.dmg`
 
 ---
 
-## 🏛️ Architecture
+## Architecture
 
 ### Tech Stack
 
@@ -216,7 +216,7 @@ FaceFortify.Desktop/
 
 ---
 
-## 🛡️ Security
+## Security
 
 ### What We Do
 
@@ -249,14 +249,14 @@ FaceFortify.Desktop/
 
 ---
 
-## 📚 Documentation
+## Documentation
 - [Documentation](docs/README.md) - Code Algorithms 
 - [Security](docs/SECURITY.md) - Security architecture
 - [Contributing](CONTRIBUTING.md) - Contribution guidelines
 
 ---
 
-## 📝 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
@@ -269,7 +269,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Avalonia Team** - Cross-platform UI framework
 - **OpenCV** - Computer vision library
@@ -279,34 +279,16 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📞 Support
-- 🐛 [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues)
+## Support
+- [Issues](https://github.com/SonuKumar-dev/FaceFortify/issues)
 
 **Security Issues**: Please report privately to work1.sonukumar@gmail.com
-
----
-
-## 🗺️ Roadmap
-
-### v1.1 (Planned)
-- [ ] Multi-user support
-- [ ] Timed auto-lock
-- [ ] Cloud backup (encrypted)
-- [ ] Biometric integration (Windows Hello, Touch ID)
-
-### v2.0 (Future)
-- [ ] Network folder support
-- [ ] Encrypted vault
-- [ ] File shredding
-- [ ] Hardware key integration (YubiKey)
-
----
 
 <div align="center">
 
 **Made with ❤️ for Privacy and Security**
 
-⭐ Star us on GitHub — it motivates us a lot!
+Star us on GitHub — it motivates us a lot!
 
 [⬆ Back to Top](#-facefortify)
 
