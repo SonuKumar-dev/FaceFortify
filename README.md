@@ -56,9 +56,9 @@
 </div>
 
 
-## ✨ Features
+## Features
 
-### 🔐 Security Features
+### Security Features
 
 - **Facial Recognition Authentication**
   - Multi-frame capture for high accuracy
@@ -78,7 +78,7 @@
   - macOS chflags (user immutable)
   - Complete file system protection
 
-### 👤 User Experience
+### User Experience
 
 - **Intuitive Interface**
   - Clean, modern design
@@ -94,7 +94,7 @@
 
 ---
 
-## 📥 Download
+## Download
 
 ### Latest Release
 
