@@ -48,7 +48,7 @@
 <!-- <div align="center"> -->
 
 ### 🏠 Dashboard – Manage Protected Folders
-<img src="docs/images/dashboard.PNG" width="600"/>
+<img src="docs/images/dashboard.JPG" width="600"/>
 
 ### 📷 Face Register Screen
 <img src="docs/images/Camera Feed.PNG" width="600"/>
